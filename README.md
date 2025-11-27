@@ -31,3 +31,29 @@ Below are the folders I completed on Day 1:
 - Pushed my Go code to GitHub for the first time 🎉
 
 ---
+
+
+🚀 Go Learning Journey
+
+📅 Day 2 – Topics Covered
+
+Today, I strengthened my understanding of Go Functions and built a small app.
+Below are the topics and concepts I completed on Day 2:
+
+Folder/Concept	Topic
+11_closures	Closures (function inside function)
+12_higher_order	Higher-Order Functions (functions as values, parameters, return types)
+13_variadic_functions	Variadic Functions (func sum(nums ...int))
+
+📝 Summary of Day 2 Learning
+
+Understood Closures with simple examples
+
+Practiced Higher-Order functions
+
+Learned and used Variadic function syntax
+
+Built a Calculator CLI app using functions
+
+
+
