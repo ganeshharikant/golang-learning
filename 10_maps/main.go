@@ -16,7 +16,7 @@ fmt.Println(m1)
 m1["age"]=30
   fmt.Println(m1)
 k,ok:=m1["price"]
- if ok{
+ if ok{                
 	fmt.Println("all ok")
  }else{
 	fmt.Println("not done")
