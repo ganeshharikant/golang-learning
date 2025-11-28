@@ -57,3 +57,34 @@ Built a Calculator CLI app using functions
 
 
 
+
+
+📅 Day 3 – Topics Covered
+
+Today, I learned and implemented deeper backend-level Go concepts focused on memory reference, struct design, composition, and abstraction.
+
+| Folder/Concept                  | Topic / Understanding                                                                                                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **14_pointers**                 | Understood memory addresses using `&` and value access/modification via dereferencing `*` (reference-based updates).                      |
+| **15_structs**                  | Learned to model real entities using structs (`type User struct {}`) and access/modify fields using dot notation (`u.name`).              |
+| **16_embedded_structs**         | Learned struct composition by embedding one struct inside another for reuse (`type A struct { B }`).                                      |
+| **17_interfaces**               | Learned method contracts using `type Animal interface { Speak() }` and struct-based interface implementation for scalable backend design. |
+| **18_struct_interface_binding** | Practiced assigning a struct instance to an interface type and calling methods polymorphically (`var a Animal = Dog{}`).                  |
+
+📝 Summary of Day 3 Learning
+
+Pointers help pass data by reference instead of copy, useful inside functions and struct updates
+
+Structs are used for clean data modeling in backend systems
+
+Embedded structs provide structure reuse without duplication (Go’s composition model)
+
+Interfaces ensure scalable, testable, abstraction-friendly code
+
+Practiced interface implementation inside structs
+
+No direct slice == comparison → used slices.Equal() ✅
+
+Map grows by inserting keys, slice grows by append() ✅
+
+Ran Go code using terminal inside VS Code confidently
