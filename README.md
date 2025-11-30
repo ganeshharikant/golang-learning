@@ -91,3 +91,47 @@ Ran Go code using terminal inside VS Code confidently
 
 
 
+## 📅 Day 4 – Topics Covered
+
+Today, I built a **modular CLI backend simulation project (Smart Inventory System)** and applied multiple Go fundamentals together like a real backend flow (without database).
+
+### ✅ Concepts Practiced Today
+
+| Concept | Usage in practice |
+|--------|------------------|
+| Slice | Created and modified order history (`[]string`) |
+| Map | Built fast lookup storage (`map[string]*inventory`) |
+| Pointer | Updated stock using reference (`*inventory`) |
+| Embedded Struct | Inventory reused product fields via composition |
+| Interface | Implemented stock update contract (`StockUpdater`) |
+| Loop/Range | Iterated over map & slice for prints and analytics |
+| Switch | Built CLI menu & category routing logic |
+| Functions (multi-return) | Returned total stock + total products count |
+| If-Else | Added validation for name, price, and stock updates |
+
+---
+
+### 🧪 Project Backend Flow Tested
+
+- Added multiple products into inventory map  
+- Updated product stock using pointer/interface method  
+- Placed repeated orders stored in a slice  
+- Printed full inventory using loop/range  
+- Counted order frequency using a map + loop  
+- Routed products using switch inside function  
+- Printed analytics and stats clearly in CLI  
+
+---
+
+### 📝 Summary of Day 4 Learning
+
+- Learned how to **break backend logic into small modular functions**
+- Practiced **pointer-based updates inside embedded structs ✅**
+- Stored values in **map using pointers for real updates ✅**
+- Appended order history using slice (`append()`) ✅
+- Used `switch` for CLI menu control and category routing ✅
+- Created and handled functions returning 2 values confidently ✅
+- Ran and tested my Go project successfully using terminal + VS Code
+- Pushed Day 4 updates to GitHub with meaningful commit messages 🎉
+
+🚀 Feeling more confident building backend simulations with Go!
