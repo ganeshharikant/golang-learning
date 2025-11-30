@@ -8,15 +8,13 @@ import "fmt"
 // 	status string
 // }
 
-
-
 // func (o *order1)changestatus(a string ){
 //        o.status=a
 
 // }
 
 // func (o order1)getamount()float32{
-//   return o.amount 
+//   return o.amount
 // }
 
 // func neworder(id string,amount float32,status string) order1{
@@ -27,7 +25,6 @@ import "fmt"
 // }
 
 // return myorder
-
 
 // }
 

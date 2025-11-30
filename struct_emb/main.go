@@ -25,7 +25,7 @@ myorder:=order{
 }
 
 fmt.Println(myorder)
-fmt.Println(myorder.customer.name)
+fmt.Println(myorder.name)
 
 
 
