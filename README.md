@@ -135,3 +135,31 @@ Today, I built a **modular CLI backend simulation project (Smart Inventory Syste
 - Pushed Day 4 updates to GitHub with meaningful commit messages 🎉
 
 🚀 Feeling more confident building backend simulations with Go!
+
+
+📅 Day 5 – Topics Covered
+
+Today, I learned and practiced concurrent and scalable Go concepts including goroutines, synchronization using WaitGroup, generics, and enum-like patterns using constants/iota.
+
+
+
+| Concept                    | Usage / What I learned                                                                                          |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Goroutines**             | Learned lightweight concurrency using `go func()` for parallel execution and improved performance.              |
+| **WaitGroup**              | Understood synchronization to wait for multiple goroutines using `sync.WaitGroup`, `Add()`, `Done()`, `Wait()`. |
+| **Enums**                  | Implemented enum-like behavior using `iota` with constants (`type Status int`).                                 |
+| **Generics**               | Learned to create reusable type-safe functions using generics (`func PrintAny[T any](v T)`).                    |
+| **WaitGroup + Slice Flow** | Used `WaitGroup` inside loops to wait for parallel tasks dynamically.                                           |
+
+
+Development Flow Simulated
+
+Ran functions concurrently using goroutines ✅
+
+Waited for multiple goroutine tasks inside main flow using WaitGroup ✅
+
+Built reusable function logic using Generics ✅
+
+Created backend state categories using Enums (iota) ✅
+
+Used wg.Wait() to control parallel execution finish before next step ✅
