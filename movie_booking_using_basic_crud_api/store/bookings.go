@@ -12,10 +12,23 @@ var idCounter = 5001
 
 func SaveBooking(b models.Booking) models.Booking {
 	b.BookingID = idCounter
+
 	b.BookedAt = time.Now()
 	b.IsActive = true
 
 	idCounter++
 	bookings = append(bookings, b)
 	return b
+}
+func DeactivateBooking(id int) bool {
+	for i, v := range bookings {
+		if v.BookingID == id {
+			if !v.IsActive {
+				return false 
+			}
+			bookings[i].IsActive = false
+			return true
+		}
+	}
+	return false
 }
