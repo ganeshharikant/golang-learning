@@ -43,3 +43,13 @@ func GetAllActive() []models.Booking {
 	}
 	return active
 }
+
+
+func GetOneActive(id int) (models.Booking, bool) {
+	for _, b := range bookings {
+		if b.BookingID == id && b.IsActive {
+			return b, true
+		}
+	}
+	return models.Booking{}, false
+}

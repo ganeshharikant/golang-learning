@@ -61,3 +61,32 @@ func GetAllBookings(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(bookings)
 }
 
+func GetBookingByID(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	idStr := r.PathValue("booking_id")
+	id, err := strconv.Atoi(idStr)
+
+	
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		json.NewEncoder(w).Encode(map[string]string{
+			"error": "Invalid booking ID",
+		})
+		return
+	}
+
+	
+	booking, ok := store.GetOneActive(id)
+	if !ok {
+		w.WriteHeader(http.StatusNotFound)
+		json.NewEncoder(w).Encode(map[string]string{
+			"error": "Booking not found",
+		})
+		return
+	}
+
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(booking)
+}
