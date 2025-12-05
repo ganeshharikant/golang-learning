@@ -32,3 +32,14 @@ func DeactivateBooking(id int) bool {
 	}
 	return false
 }
+
+func GetAllActive() []models.Booking {
+	active := []models.Booking{}
+
+	for _, b := range bookings {
+		if b.IsActive {
+			active = append(active, b)
+		}
+	}
+	return active
+}

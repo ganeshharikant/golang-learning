@@ -52,4 +52,12 @@ w.WriteHeader(http.StatusOK)
 	
 }
 
+func GetAllBookings(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	bookings := store.GetAllActive()
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(bookings)
+}
 
