@@ -15,7 +15,7 @@ placed          ="placed"
 
 func main(){
 
-var  status orderStatus ="heelo"
+var  status orderStatus =packed
 
 // fmt.Println(orderStatus)
 fmt.Println(status)

@@ -5,6 +5,7 @@ import "fmt"
 
 type paymenter interface{
 	pay(amount float32)
+	check(balance float32)
 }
 type payment struct{
 	 gateway paymenter
@@ -21,7 +22,9 @@ type stripe struct{}
 func( s stripe)pay(amount float32){
 	fmt.Println("making payment using stripe",amount)
 }
-
+func(s stripe)check(balance float32){
+	fmt.Println("making balance using stripe",balance)
+}
 
 type razorpay struct{}
 
@@ -35,10 +38,10 @@ newpay:=payment{
    gateway: stripe{},
 }
 newpay.makepayment(1000)
-newpay1:=payment{
-   gateway: razorpay{},
-}
-newpay1.makepayment(1000)
+// newpay1:=payment{
+//    gateway: razorpay{},
+// }
+// newpay1.makepayment(1000)
 
 
 
