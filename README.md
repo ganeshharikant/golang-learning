@@ -163,3 +163,70 @@ Built reusable function logic using Generics ✅
 Created backend state categories using Enums (iota) ✅
 
 Used wg.Wait() to control parallel execution finish before next step ✅
+
+
+ 
+Movie Booking CRUD API Project
+
+Today, I built a complete CRUD-based Movie Booking Backend API using Go.
+This project helped me understand real API development, routing, JSON handling, and backend logic flow.
+
+| Feature               | Description                                          |
+| --------------------- | ---------------------------------------------------- |
+| **Create Movie**      | Add new movie with name, rating, and available seats |
+| **Read All Movies**   | Fetch list of all movies                             |
+| **Read One Movie**    | Fetch a single movie by ID                           |
+| **Update Movie**      | Modify movie details (rating, seats, name)           |
+| **Delete Movie**      | Remove movie by ID                                   |
+| **Book a Ticket**     | Reduce seats only if seats are available             |
+| **In-Memory DB**      | Used slice/map as temporary storage                  |
+| **Validation**        | Checked for missing fields & wrong IDs               |
+| **JSON Input/Output** | Full JSON body handling for requests                 |
+Tested API Endpoints
+1️⃣ Create Movie
+
+POST /movies
+
+2️⃣ Get All Movies
+
+GET /movies
+
+3️⃣ Get Movie by ID
+
+GET /movies/{id}
+
+4️⃣ Update Movie
+
+PUT /movies/{id}
+
+5️⃣ Delete Movie
+
+DELETE /movies/{id}
+
+6️⃣ Book Movie Ticket
+
+POST /movies/{id}/book
+
+✔ Tested everything using Postman
+✔ Validated JSON requests/responses
+✔ Confirmed CRUD flow end-to-end
+
+📝 Summary of Day 10 Learning
+
+Built a functional CRUD backend in Go
+
+Understood REST routing and HTTP methods
+
+Learned JSON marshaling/unmarshaling
+
+Modeled data using structs
+
+Used maps and slices to store runtime data
+
+Improved error handling using proper status codes
+
+Learned how booking affects seat count
+
+Pushed project to GitHub with clean folder structure
+
+
