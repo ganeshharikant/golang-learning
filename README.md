@@ -229,4 +229,53 @@ Learned how booking affects seat count
 
 Pushed project to GitHub with clean folder structure
 
+## 📅 Backend Foundations – HTTP & JSON APIs (Today)
+
+Today, I focused on **real backend development in Go** by learning how HTTP servers work and by building APIs using the `net/http` package.
+
+### ✅ Concepts Learned
+
+| Concept                    | What I Learned (Backend View)                                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **JSON (Client ↔ Server)** | JSON is the data contract between client and server. Client sends request JSON, server decodes it into Go structs, processes logic, and encodes response JSON back. |
+| **Struct Tags**            | Used `json:"field"` tags to correctly map JSON keys to Go struct fields and maintain API contracts.                                                                 |
+| **net/http Package**       | Learned how Go provides built-in tools to build HTTP servers without external frameworks.                                                                           |
+| **http.ListenAndServe**    | Starts the HTTP server, listens on a port, and routes requests using the default router (`ServeMux`).                                                               |
+| **http.HandleFunc**        | Registers API routes and acts as the default router when `nil` is passed to `ListenAndServe`.                                                                       |
+| **Handler Functions**      | Implemented handlers with signature `func(w http.ResponseWriter, r *http.Request)` to process requests and send responses.                                          |
+| **http.ResponseWriter**    | Used to set headers, status codes, and write JSON responses back to the client.                                                                                     |
+| ***http.Request**          | Used to read HTTP method, headers, URL path, query params, and JSON request body.                                                                                   |
+| **JSON Decoder / Encoder** | Used `json.NewDecoder(r.Body).Decode(&struct)` for request parsing and `json.NewEncoder(w).Encode(struct)` for responses.                                           |
+| **HTTP Methods**           | Understood GET for fetching data (idempotent) and POST for sending/creating data (non-idempotent).                                                                  |
+| **Idempotency**            | Learned that GET can be safely called multiple times, while POST changes server state on every call.                                                                |
+
+---
+
+### 🛠️ APIs Built
+
+| API            | Method | Description                                                             |
+| -------------- | ------ | ----------------------------------------------------------------------- |
+| `/profile`     | GET    | Returned user profile data as JSON response                             |
+| `/create-user` | POST   | Accepted JSON request body, decoded it into struct, and echoed response |
+
+---
+
+### 🔁 Backend Request–Response Flow (Locked In)
+
+```
+Client JSON → HTTP Request → Handler → Decoder → Go Struct
+→ Business Logic → Encoder → HTTP Response → Client JSON
+```
+
+---
+
+### 📝 Key Takeaways
+
+* Backend APIs revolve around **handlers, JSON, and HTTP methods**
+* Structs are internal models, JSON is an external contract
+* Decoder is the input gate, Encoder is the output gate
+* Always validate method, JSON, and headers
+* Typed code written by hand improves understanding and debugging skills
+
+🚀 This session marked my transition from Go basics to **real backend API development**.
 
