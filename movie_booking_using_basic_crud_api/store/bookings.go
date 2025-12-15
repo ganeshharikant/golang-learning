@@ -6,7 +6,7 @@ import (
 )
 
 var bookings []models.Booking
-var idCounter = 5001
+var idCounter = 1
 
 
 
